@@ -7,8 +7,8 @@ public partial class Vehicle3
 	
 
 	//Stats
-	protected float Acceleration = 500f;	//150
-	protected float MaxSpeed = 800f;	//350
+	protected float Acceleration = 150f;	//150
+	protected float MaxSpeed = 350f;	//350
 	protected float MaxReverseSpeed = 75f;
 	protected float BrakePower = 150f;
 	protected float Steering = 0.045f;
