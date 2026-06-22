@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cykuxfnqk2ett"]
+
+[ext_resource type="Script" uid="uid://c43w5s3yyis0x" path="res://Scripts/Vehicle/Vehicle3.cs" id="1_erwwo"]
+[ext_resource type="Texture2D" uid="uid://hrgy4eptfkij" path="res://Images/Vehicles/GoKarts/Kart1/Body.png" id="1_y4rnb"]
+[ext_resource type="Texture2D" uid="uid://cimgi0ksmikj" path="res://Images/Vehicles/GoKarts/Kart1/Paint.png" id="2_3ngla"]
+[ext_resource type="PackedScene" uid="uid://di3uv01iji0iu" path="res://Scenes/wheel.tscn" id="4_erwwo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ngla"]
+custom_solver_bias = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_erwwo"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[node name="Vehicle" type="CharacterBody2D" unique_id=1240049524]
+script = ExtResource("1_erwwo")
+
+[node name="Sprites" type="Node2D" parent="." unique_id=1527791435]
+
+[node name="Body" type="Sprite2D" parent="Sprites" unique_id=1078182359]
+position = Vector2(0, 2)
+texture = ExtResource("1_y4rnb")
+
+[node name="Paint" type="Sprite2D" parent="Sprites" unique_id=522876344]
+modulate = Color(0.6039216, 0.8039216, 0.19607843, 1)
+texture = ExtResource("2_3ngla")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2095408299]
+shape = SubResource("CapsuleShape2D_3ngla")
+
+[node name="Wheels" type="Node2D" parent="." unique_id=1631244647]
+
+[node name="Wheel" parent="Wheels" unique_id=1778634253 instance=ExtResource("4_erwwo")]
+position = Vector2(-8, -5)
+
+[node name="Wheel2" parent="Wheels" unique_id=1665307114 instance=ExtResource("4_erwwo")]
+position = Vector2(8, -5)
+
+[node name="Wheel3" parent="Wheels" unique_id=548865308 instance=ExtResource("4_erwwo")]
+position = Vector2(-8, 12)
+
+[node name="Wheel4" parent="Wheels" unique_id=371765496 instance=ExtResource("4_erwwo")]
+position = Vector2(8, 12)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=536743475]
+zoom = Vector2(3, 3)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1904548436]
+
+[node name="Label" type="Label" parent="UI" unique_id=1145792432]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_erwwo")

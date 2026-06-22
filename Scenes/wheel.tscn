@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://di3uv01iji0iu"]
+
+[ext_resource type="Script" uid="uid://cr00svo76t2ei" path="res://Scripts/Vehicle/Wheel.cs" id="1_u5up5"]
+[ext_resource type="Texture2D" uid="uid://dktlmntrjdc6y" path="res://Images/Vehicles/GoKarts/Kart1/Wheel.png" id="1_y7iat"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7iat"]
+radius = 3.0
+
+[node name="Wheel" type="Area2D" unique_id=1778634253]
+script = ExtResource("1_u5up5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1897453148]
+texture = ExtResource("1_y7iat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214069118]
+position = Vector2(0, 0.5)
+shape = SubResource("CircleShape2D_y7iat")

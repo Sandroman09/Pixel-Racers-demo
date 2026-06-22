@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://by1e7d0imcm5c"]
+
+[ext_resource type="Texture2D" uid="uid://ceguhu7woaq2a" path="res://Images/Maps/Map1.png" id="1_r5l72"]
+[ext_resource type="PackedScene" uid="uid://cykuxfnqk2ett" path="res://Scenes/vehicle.tscn" id="2_r5l72"]
+
+[node name="TestScene" type="Node2D" unique_id=601465849]
+
+[node name="Map" type="Node2D" parent="." unique_id=403610098]
+
+[node name="Map1" type="Sprite2D" parent="Map" unique_id=1184248127]
+position = Vector2(623, -137)
+scale = Vector2(6, 6)
+texture = ExtResource("1_r5l72")
+
+[node name="Vehicle" parent="." unique_id=1730415572 instance=ExtResource("2_r5l72")]
+position = Vector2(-748, 2657)
+collision_layer = 0
